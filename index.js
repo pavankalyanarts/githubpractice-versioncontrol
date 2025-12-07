@@ -133,22 +133,40 @@
 // console.log(arr);
 // console.log(arr.toString());
 
-const myObj = {
-  name: "John",
-  age: 30,
-  cars: [
-    {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
-    {name:"BMW", models:["320", "X3", "X5"]},
-    {name:"Fiat", models:["500", "Panda"]}
-  ]
+// const myObj = {
+//   name: "John",
+//   age: 30,
+//   cars: [
+//     {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+//     {name:"BMW", models:["320", "X3", "X5"]},
+//     {name:"Fiat", models:["500", "Panda"]}
+//   ]
+// }
+
+// for(let i in myObj.cars){
+//     console.log(`CompayName: ${myObj.cars[i].name}
+// Models:`);
+//     for(let j in myObj.cars[i].models){
+//         console.log(myObj.cars[i].models[j]);
+//     }
+//     console.log("==================================")
+// }
+
+function sendValues(val){
+  let arr = []
+  for (let i=0; i<=val; i++){
+    arr += i;
+  }
+
+  return arr;
 }
 
-for(let i in myObj.cars){
-    console.log(`CompayName: ${myObj.cars[i].name}
-Models:`);
-    for(let j in myObj.cars[i].models){
-        console.log(myObj.cars[i].models[j]);
-    }
-    console.log("==================================")
+function valueIdentifier(val1, val2, myCallback){
+  let sum = val1 + val2;
+
+  return myCallback(sum);
 }
 
+let output = valueIdentifier(3, 4, sendValues)
+
+console.log(output);
