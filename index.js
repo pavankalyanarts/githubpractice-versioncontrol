@@ -170,3 +170,5 @@ function valueIdentifier(val1, val2, myCallback){
 let output = valueIdentifier(3, 4, sendValues)
 
 console.log(output);
+
+console.log("feature is live");
